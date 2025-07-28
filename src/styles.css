@@ -71,6 +71,10 @@ body {
     border: 1px solid var(--Slate-900);
     height: 3rem;
     margin-top: 1rem;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    padding: 1rem;
   }
 }
 
