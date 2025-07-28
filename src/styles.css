@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "plus_jakarta_sansregular";
+  src:
+    url("./assets/fonts/plusjakartasans-variablefont_wght-webfont.woff2")
+      format("woff2"),
+    url("./assets/fonts/plusjakartasans-variablefont_wght-webfont.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +31,22 @@ body {
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Slate-100: hsl(202, 86%, 94%);
+  --Slate-300: hsl(203, 41%, 72%);
+  --Slate-500: hsl(200, 26%, 54%);
+  --Slate-700: hsl(200, 24%, 40%);
+  --Slat-900: hsl(202, 55%, 16%);
 }
 
 body > * {
@@ -40,4 +67,5 @@ section {
 
 .calculator-container {
   border: 1px solid black;
+  flex-direction: column;
 }
