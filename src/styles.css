@@ -66,7 +66,7 @@ body {
   padding: 2rem 1rem 0;
   color: var(--Slate-700);
 
-  input {
+  input[type="number"] {
     border-radius: 5px;
     border: 1px solid var(--Slate-900);
     height: 3rem;
@@ -75,6 +75,35 @@ body {
     font-size: inherit;
     font-weight: 700;
     padding: 1rem;
+  }
+
+  .radio-container {
+    border-radius: 5px;
+    border: 1px solid var(--Slate-900);
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    margin-top: 1rem;
+    color: var(--Slate-900);
+    font-weight: 700;
+    cursor: pointer;
+
+    input[type="radio"] {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--Slate-900);
+      border-radius: 50%;
+      outline: none;
+      background-color: white;
+      cursor: pointer;
+      margin: 0 1rem;
+
+      &:checked {
+        background-color: var(--Lime);
+        border-color: var(--Lime);
+      }
+    }
   }
 }
 

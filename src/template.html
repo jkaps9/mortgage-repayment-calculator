@@ -17,7 +17,7 @@
             </div>
             <label>
               Mortgage Amount
-              <input type="text" min="0" value="300,000" />
+              <input type="number" min="0" value="300000" />
             </label>
             <label>
               Mortgage Term
@@ -27,30 +27,36 @@
               Interest Rate
               <input type="number" min="0" value="5.25" />
             </label>
+
             <fieldset>
               <legend>Mortgage Type</legend>
 
               <div>
-                <input
-                  type="radio"
-                  id="repayment"
-                  name="repayment"
-                  value="repayment"
-                  checked
-                />
-                <label for="repayment">Repayment</label>
+                <label for="repayment" class="radio-container">
+                  <input
+                    type="radio"
+                    id="repayment"
+                    name="mortgage-type"
+                    value="repayment"
+                    checked
+                  />
+                  Repayment</label
+                >
               </div>
 
               <div>
-                <input
-                  type="radio"
-                  id="interest-only"
-                  name="drone"
-                  value="interest-only"
-                />
-                <label for="interest-only">Interest Only</label>
+                <label for="interest-only" class="radio-container">
+                  <input
+                    type="radio"
+                    id="interest-only"
+                    name="mortgage-type"
+                    value="interest-only"
+                  />
+                  Interest Only</label
+                >
               </div>
             </fieldset>
+
             <button>
               <img src="./assets/images/icon-calculator.svg" alt="" />Calculate
               Repayments
