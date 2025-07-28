@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "plus_jakarta_sansregular";
+  font-family: "jakarta";
   src:
     url("./assets/fonts/plusjakartasans-variablefont_wght-webfont.woff2")
       format("woff2"),
@@ -9,6 +9,7 @@
   font-style: normal;
 }
 
+/* RESETS */
 * {
   padding: 0;
   margin: 0;
@@ -16,10 +17,19 @@
   width: 100%;
 }
 
+button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  width: auto;
+}
+
 img {
   width: auto;
 }
 
+/* Styles */
 body > *,
 main > * {
   /* For development purposes only */
@@ -28,6 +38,8 @@ main > * {
 
 body {
   min-height: 100vh;
+  font-family: "jakarta", Arial, Helvetica, sans-serif;
+  font-size: 16px;
 
   /* ## Colors */
 
@@ -46,6 +58,9 @@ body {
   --Slat-900: hsl(202, 55%, 16%);
 }
 
-.calculator-container {
-  border: 1px solid black;
+.calculator-container > .calculator > .title-row {
+  button {
+    width: auto;
+    text-decoration: underline;
+  }
 }
