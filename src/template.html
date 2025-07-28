@@ -3,14 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Title</title>
+    <title>Mortgage Calculator</title>
   </head>
 
   <body class="flex-container">
     <main class="flex-container">
       <section class="flex-container">
         <div class="calculator-container flex-container">
-          Calculator Container
+          <div class="calculator">
+            <div class="title-row flex-container">
+              <h2>Mortgage Calculator</h2>
+              <button>Clear All</button>
+            </div>
+            <label>
+              Mortgage Amount
+              <input type="number" />
+            </label>
+            <label>
+              Mortgage Term
+              <input type="number" />
+            </label>
+            <label>
+              Interest Rate
+              <input type="number" />
+            </label>
+            <fieldset>
+              <legend>Mortgage Type</legend>
+
+              <div>
+                <input
+                  type="radio"
+                  id="repayment"
+                  name="repayment"
+                  value="repayment"
+                  checked
+                />
+                <label for="repayment">Repayment</label>
+              </div>
+
+              <div>
+                <input
+                  type="radio"
+                  id="interest-only"
+                  name="drone"
+                  value="interest-only"
+                />
+                <label for="interest-only">Interest Only</label>
+              </div>
+            </fieldset>
+            <button>
+              <img src="./assets/images/icon-calculator.svg" alt="" />Calculate
+              Repayments
+            </button>
+          </div>
+          <div class="results">
+            <div class="empty-results">
+              <img src="./assets/images/illustration-empty.svg" alt="" />
+              <h2>Results shown here</h2>
+              <p>
+                Complete the form and click “calculate repayments” to see what
+                your monthly repayments would be.
+              </p>
+            </div>
+            <div class="completed-results hidden">
+              <h2>Your results</h2>
+              <p>
+                Your results are shown below based on the information you
+                provided. To adjust the results, edit the form and click
+                “calculate repayments” again.
+              </p>
+              <div class="numeric-results">
+                <div class="monthly-repayments">
+                  <h3>Your monthly repayments</h3>
+                  <p class="monthly-repayment-amount"></p>
+                </div>
+                <div class="total-repayments">
+                  <h3>Total you'll repay over the term</h3>
+                  <p class="total-repayment-amount"></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
