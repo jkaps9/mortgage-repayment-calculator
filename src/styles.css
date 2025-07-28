@@ -105,6 +105,23 @@ body {
       }
     }
   }
+
+  button {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    &#calculate {
+      background-color: var(--Lime);
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--Slate-900);
+      padding: 1rem;
+    }
+  }
 }
 
 .calculator-container > .calculator {
@@ -120,7 +137,6 @@ body {
 
   button {
     margin-top: 0.5rem;
-    width: auto;
     text-decoration: underline;
     color: var(--Slate-700);
   }
