@@ -148,7 +148,7 @@ body {
 
 .results {
   flex: 1;
-  background-color: var(--Slate-900);
+  background-color: var(--Slate-700);
   text-align: center;
   padding-top: 2rem;
   margin-top: 2rem;
@@ -167,5 +167,40 @@ body {
 
   .hidden {
     display: none;
+  }
+
+  .completed-results {
+    text-align: start;
+    padding: 0 1rem;
+
+    .numeric-results {
+      margin-top: 1rem;
+      border-top: 4px solid var(--Lime);
+      border-radius: 5px;
+      background-color: var(--Slate-900);
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+
+      div {
+        padding: 1rem;
+
+        &.line {
+          width: 90%;
+          margin: 0 1rem;
+          padding: 0;
+          border-top: 1px solid var(--Slate-100);
+          opacity: 0.2;
+        }
+      }
+
+      p.monthly-repayment-amount {
+        color: var(--Lime);
+        font-size: 2.5rem;
+      }
+
+      p.total-repayment-amount {
+        font-size: 1.5rem;
+        color: var(--White);
+      }
+    }
   }
 }
