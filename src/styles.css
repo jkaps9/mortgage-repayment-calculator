@@ -125,6 +125,10 @@ section {
       background-color: var(--Red);
       color: var(--White);
     }
+
+    &:has(input[type="number"]:invalid) + .required-text {
+      display: block;
+    }
   }
 
   .required-text {
