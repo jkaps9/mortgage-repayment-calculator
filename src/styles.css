@@ -43,12 +43,6 @@ label {
 }
 
 /* Styles */
-body > *,
-main > * {
-  /* For development purposes only */
-  /* border: 1px solid red; */
-}
-
 body {
   min-height: 100vh;
   font-family: "jakarta", Arial, Helvetica, sans-serif;
