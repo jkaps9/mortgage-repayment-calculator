@@ -27,8 +27,8 @@ calculateButton.addEventListener("click", () => {
   }
 });
 
-function payment(principal, term, rate) {
-  // // M  = P * (r (1 + r)n) / ((1 + r)n - 1)
+function getMonthlyPayment(principal, term, rate) {
+  // // M  = P * (r (1 + r)^n) / ((1 + r)^n - 1)
   // M	Total monthly mortgage payment
   // P	Principal loan amount
   // r	Monthly interest rate: Lenders provide you an annual rate so you’ll need to divide that figure by 12 (the number of months in a year) to get the monthly rate. If your interest rate is 5 percent, your monthly rate would be 0.004167 (0.05/12=0.004167).
@@ -39,7 +39,15 @@ function payment(principal, term, rate) {
   const numerator = monthlyRate * Math.pow(1 + monthlyRate, months);
   const denominator = Math.pow(1 + monthlyRate, months) - 1;
   const monthlyPayment = principal * (numerator / denominator);
-  return Math.round((monthlyPayment + Number.EPSILON) * 100) / 100;
+  return monthlyPayment;
+  //   return Math.round((monthlyPayment + Number.EPSILON) * 100) / 100;
 }
 
-console.log(payment(300000, 30, 0.0525));
+console.log(getMonthlyPayment(300000, 25, 0.0525));
+
+function getTotalPayments(principal, term, rate) {
+  const monthlyPayment = getMonthlyPayment(principal, term, rate);
+  return monthlyPayment * (12 * term);
+}
+
+console.log(getTotalPayments(300000, 25, 0.0525));
