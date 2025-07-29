@@ -32,7 +32,8 @@ calculateButton.addEventListener("click", () => {
     completedResults.classList.remove("hidden");
   }
 
-  const principal = principalInput.value;
+  const principal = Number(principalInput.value.replace(",", ""));
+  console.log(principal);
   const term = termInput.value;
   const rate = rateInput.value / 100;
 
@@ -73,3 +74,13 @@ function getTotalPayments(principal, term, rate) {
 function roundToTwoDecimals(num) {
   return Math.round((num + Number.EPSILON) * 100) / 100;
 }
+
+principalInput.addEventListener("input", (e) => {
+  const value = Number(e.target.value.replace(",", ""));
+  e.target.value = value ? Number(value).toLocaleString() : e.target.value;
+});
+
+principalInput.addEventListener("focusin", (e) => {
+  const value = Number(e.target.value.replace(",", ""));
+  e.target.value = value ? Number(value).toLocaleString() : e.target.value;
+});
