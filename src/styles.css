@@ -14,7 +14,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  width: 100%;
 }
 
 button {
@@ -36,6 +35,7 @@ fieldset {
 
 input {
   cursor: pointer;
+  width: 100%;
 }
 
 /* Styles */
@@ -283,4 +283,33 @@ body {
 }
 
 @media (min-width: 750px) {
+  body {
+    background-color: var(--Slate-100);
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .calculator-container {
+    flex-direction: row;
+  }
+
+  .calculator {
+    background-color: var(--White);
+    width: 50%;
+
+    button#calculate {
+      align-self: flex-start;
+      font-size: 0.9rem;
+      padding: 1rem 2rem;
+    }
+  }
+
+  .results {
+    width: 50%;
+    margin-top: 0;
+  }
 }
