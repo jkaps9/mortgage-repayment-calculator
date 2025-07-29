@@ -38,9 +38,10 @@ calculateButton.addEventListener("click", () => {
 
   monthlyPayment.textContent =
     "£" +
-    roundToTwoDecimals(
-      getMonthlyPayment(principal, term, rate),
-    ).toLocaleString();
+    roundToTwoDecimals(getMonthlyPayment(principal, term, rate)).toLocaleString(
+      undefined,
+      { minimumFractionDigits: 2 },
+    );
   totalPayment.textContent =
     "£" +
     roundToTwoDecimals(getTotalPayments(principal, term, rate)).toLocaleString(
