@@ -2,6 +2,9 @@ import "./styles.css";
 
 const clearButton = document.querySelector(".title-row > button");
 const inputs = document.querySelectorAll("input");
+const principalInput = document.querySelector("input#principal");
+const termInput = document.querySelector("input#term");
+const rateInput = document.querySelector("input#rate");
 
 const calculateButton = document.querySelector("#calculate");
 const emptyResults = document.querySelector(".empty-results");
@@ -29,12 +32,21 @@ calculateButton.addEventListener("click", () => {
     completedResults.classList.remove("hidden");
   }
 
+  const principal = principalInput.value;
+  const term = termInput.value;
+  const rate = rateInput.value / 100;
+
   monthlyPayment.textContent =
     "£" +
-    roundToTwoDecimals(getMonthlyPayment(300000, 15, 0.0525)).toLocaleString();
+    roundToTwoDecimals(
+      getMonthlyPayment(principal, term, rate),
+    ).toLocaleString();
   totalPayment.textContent =
     "£" +
-    roundToTwoDecimals(getTotalPayments(300000, 15, 0.0525)).toLocaleString();
+    roundToTwoDecimals(getTotalPayments(principal, term, rate)).toLocaleString(
+      undefined,
+      { minimumFractionDigits: 2 },
+    );
 });
 
 function getMonthlyPayment(principal, term, rate) {
@@ -58,6 +70,5 @@ function getTotalPayments(principal, term, rate) {
 }
 
 function roundToTwoDecimals(num) {
-  console.log(num);
   return Math.round((num + Number.EPSILON) * 100) / 100;
 }
