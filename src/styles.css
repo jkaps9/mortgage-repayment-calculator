@@ -65,6 +65,7 @@ body {
   --Slate-500: hsl(200, 26%, 54%);
   --Slate-700: hsl(200, 24%, 40%);
   --Slate-900: hsl(202, 55%, 16%);
+  --Slate-900-darker: rgb(13, 34, 46);
 }
 
 main,
@@ -269,7 +270,7 @@ section {
       margin-top: 1rem;
       border-top: 4px solid var(--Lime);
       border-radius: 5px;
-      background-color: var(--Slate-900);
+      background-color: var(--Slate-900-darker);
       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 
       div {
