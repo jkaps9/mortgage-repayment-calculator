@@ -252,7 +252,7 @@ section {
   }
 
   p {
-    color: var(--Slate-300);
+    color: var(--Slate-500);
     font-weight: 700;
     line-height: 1.5;
   }
@@ -336,7 +336,7 @@ section {
     .results {
       align-self: stretch;
       margin-top: 0;
-      border-bottom-left-radius: 100px;
+      border-bottom-left-radius: 4rem;
 
       .completed-results {
         padding: 0;
@@ -356,7 +356,7 @@ section {
       }
 
       .numeric-results {
-        margin-top: 4rem;
+        margin-top: 2rem;
       }
     }
   }
