@@ -92,6 +92,10 @@ body {
     &:focus {
       outline-color: var(--Lime);
     }
+
+    &:invalid {
+      border-color: var(--Red);
+    }
   }
 
   .input-container {
@@ -102,6 +106,11 @@ body {
     &:has(input[type="number"]:focus) > .inner-label {
       background-color: var(--Lime);
       color: var(--Slate-900);
+    }
+
+    &:has(input[type="number"]:invalid) > .inner-label {
+      background-color: var(--Red);
+      color: var(--White);
     }
   }
 
