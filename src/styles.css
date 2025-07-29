@@ -131,7 +131,7 @@ section {
     height: calc(3rem - 2px);
     padding: 0 1rem;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
 
     &.left {
       left: 1px;
@@ -199,7 +199,7 @@ section {
       background-color: var(--Lime);
       border-radius: 100px;
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--Slate-900);
       padding: 1rem;
       &:hover {
@@ -357,6 +357,18 @@ section {
 
       .numeric-results {
         margin-top: 2rem;
+
+        div {
+          padding: 1.5rem;
+        }
+
+        p.monthly-repayment-amount {
+          font-size: 3rem;
+        }
+
+        p.total-repayment-amount {
+          font-size: 1.25rem;
+        }
       }
     }
   }
