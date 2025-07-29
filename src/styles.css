@@ -308,11 +308,13 @@ section {
     background-color: var(--White);
     border-radius: 20px;
 
-    .calculator {
+    .calculator,
+    .results {
+      padding: 2rem;
       width: 50%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    }
 
+    .calculator {
       label {
         grid-column: 1;
       }
@@ -325,10 +327,25 @@ section {
     }
 
     .results {
-      width: 50%;
+      align-self: stretch;
       margin-top: 0;
-
       border-bottom-left-radius: 100px;
+
+      .completed-results {
+        padding: 0;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      p {
+        max-width: 55ch;
+      }
+
+      .numeric-results {
+        margin-top: 4rem;
+      }
     }
   }
 }
