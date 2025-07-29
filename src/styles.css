@@ -353,6 +353,8 @@ section {
       align-self: stretch;
       margin-top: 0;
       border-bottom-left-radius: 4rem;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
 
       .completed-results {
         padding: 0;
