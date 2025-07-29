@@ -52,14 +52,10 @@ function getMonthlyPayment(principal, term, rate) {
   return monthlyPayment;
 }
 
-console.log(getMonthlyPayment(300000, 25, 0.0525));
-
 function getTotalPayments(principal, term, rate) {
   const monthlyPayment = getMonthlyPayment(principal, term, rate);
   return monthlyPayment * (12 * term);
 }
-
-console.log(getTotalPayments(300000, 25, 0.0525));
 
 function roundToTwoDecimals(num) {
   console.log(num);
