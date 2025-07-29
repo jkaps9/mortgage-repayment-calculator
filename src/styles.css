@@ -54,9 +54,9 @@ body {
 
   /* ### Primary */
 
-  --Lime: hsl(61, 70%, 52%);
-  --Lime-hover: rgba(215, 218, 47, 0.5);
-  --Lime-very-light: rgba(215, 218, 47, 0.1);
+  --Lime: rgb(215, 218, 47);
+  --Lime-hover: rgb(189, 192, 39);
+  --Lime-light: rgba(215, 218, 47, 0.2);
   --Red: hsl(4, 69%, 50%);
 
   /* ### Neutral */
@@ -100,8 +100,7 @@ section {
     font-size: inherit;
     font-weight: 700;
     padding: 1rem 0 1rem 3.5rem;
-
-    &:hover {
+    hover &:hover {
       border-color: var(--Slate-900);
     }
 
@@ -188,19 +187,19 @@ section {
     padding-left: 1rem;
 
     &:hover {
-      border-color: var(--Lime);
+      border-color: var(--Lime-hover);
     }
 
     &:has(input[type="radio"]:checked) {
-      background-color: var(--Lime-very-light);
-      border-color: var(--Lime);
+      background-color: var(--Lime-light);
+      border-color: var(--Lime-hover);
     }
 
     input[type="radio"] {
       appearance: none;
       width: 20px;
       height: 20px;
-      border: 1px solid var(--Slate-900);
+      border: 0.15em solid var(--Slate-900);
       border-radius: 50%;
       margin: 0;
       transform: translateY(-0.075em);
@@ -208,7 +207,7 @@ section {
       place-content: center;
 
       &:checked {
-        border: 1px solid var(--Lime);
+        border: 0.15em solid var(--Lime-hover);
       }
     }
 
@@ -219,7 +218,7 @@ section {
       border-radius: 50%;
       transform: scale(0);
       transition: 120ms transform ease-in-out;
-      box-shadow: inset 1em 1em var(--Lime);
+      box-shadow: inset 1em 1em var(--Lime-hover);
     }
 
     input[type="radio"]:checked::before {
