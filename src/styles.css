@@ -67,8 +67,9 @@ body {
   --Slate-300: hsl(203, 41%, 72%);
   --Slate-500: hsl(200, 26%, 54%);
   --Slate-700: hsl(200, 24%, 40%);
+  --Slate-800: hsl(202, 50%, 20%);
   --Slate-900: hsl(202, 55%, 16%);
-  --Slate-900-darker: rgb(13, 34, 46);
+  --Slate-900-darker: hsl(202, 55%, 15%);
 }
 
 main,
@@ -278,7 +279,7 @@ section {
 
 .results {
   flex: 1;
-  background-color: var(--Slate-900);
+  background-color: var(--Slate-800);
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 4rem;
@@ -347,7 +348,7 @@ section {
     .results {
       padding: 2rem;
       width: 50%;
-      max-width: 30rem;
+      max-width: 40rem;
     }
 
     .calculator {
@@ -384,7 +385,7 @@ section {
       }
 
       p {
-        max-width: 45ch;
+        max-width: 50ch;
       }
 
       .empty-results {
