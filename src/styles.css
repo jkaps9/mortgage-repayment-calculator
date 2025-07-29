@@ -245,7 +245,7 @@ section {
 
 .results {
   flex: 1;
-  background-color: var(--Slate-700);
+  background-color: var(--Slate-900);
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 4rem;
@@ -353,6 +353,11 @@ section {
 
       p {
         max-width: 45ch;
+      }
+
+      .empty-results {
+        height: 100%;
+        place-content: center;
       }
 
       .numeric-results {
