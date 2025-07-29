@@ -220,6 +220,12 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  .term-and-rate {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 
 .calculator-container > .calculator > .title-row {
@@ -321,10 +327,6 @@ section {
         margin-bottom: 1rem;
       }
 
-      label {
-        grid-column: 1;
-      }
-
       button#calculate {
         align-self: flex-start;
         font-size: 0.9rem;
@@ -346,7 +348,7 @@ section {
       }
 
       p {
-        max-width: 55ch;
+        max-width: 45ch;
       }
 
       .numeric-results {
