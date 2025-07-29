@@ -23,6 +23,7 @@ button {
   font-family: inherit;
   font-size: inherit;
   width: auto;
+  cursor: pointer;
 }
 
 img {
@@ -31,6 +32,10 @@ img {
 
 fieldset {
   border: none;
+}
+
+input {
+  cursor: pointer;
 }
 
 /* Styles */
@@ -50,6 +55,8 @@ body {
   /* ### Primary */
 
   --Lime: hsl(61, 70%, 52%);
+  --Lime-hover: rgba(215, 218, 47, 0.5);
+  --Lime-very-light: rgba(215, 218, 47, 0.1);
   --Red: hsl(4, 69%, 50%);
 
   /* ### Neutral */
@@ -71,18 +78,31 @@ body {
 
   input[type="number"] {
     border-radius: 5px;
-    border: 1px solid var(--Slate-900);
+    border: 1px solid var(--Slate-300);
     height: 3rem;
     font-family: inherit;
     font-size: inherit;
     font-weight: 700;
     padding: 1rem 0 1rem 3.5rem;
+
+    &:hover {
+      border-color: var(--Slate-900);
+    }
+
+    &:focus {
+      outline-color: var(--Lime);
+    }
   }
 
   .input-container {
     position: relative;
     width: 100%;
     margin-top: 1rem;
+
+    &:has(input[type="number"]:focus) > .inner-label {
+      background-color: var(--Lime);
+      color: var(--Slate-900);
+    }
   }
 
   .inner-label {
@@ -124,6 +144,15 @@ body {
     font-weight: 700;
     cursor: pointer;
 
+    &:hover {
+      border-color: var(--Lime);
+    }
+
+    &:has(input[type="radio"]:checked) {
+      background-color: var(--Lime-very-light);
+      border-color: var(--Lime);
+    }
+
     input[type="radio"] {
       appearance: none;
       width: 20px;
@@ -156,6 +185,9 @@ body {
       font-size: 1.1rem;
       color: var(--Slate-900);
       padding: 1rem;
+      &:hover {
+        background-color: var(--Lime-hover);
+      }
     }
   }
 }
@@ -176,6 +208,9 @@ body {
     margin-top: 0.5rem;
     text-decoration: underline;
     color: var(--Slate-700);
+    &:hover {
+      font-weight: 700;
+    }
   }
 }
 
