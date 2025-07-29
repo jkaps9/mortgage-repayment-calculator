@@ -73,11 +73,38 @@ body {
     border-radius: 5px;
     border: 1px solid var(--Slate-900);
     height: 3rem;
-    margin-top: 1rem;
     font-family: inherit;
     font-size: inherit;
     font-weight: 700;
-    padding: 1rem;
+    padding: 1rem 3rem;
+  }
+
+  .input-container {
+    position: relative;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .inner-label {
+    position: absolute;
+    place-content: center;
+    top: 1px;
+    background-color: var(--Slate-100);
+    width: auto;
+    height: calc(3rem - 2px);
+    padding: 0 0.7rem;
+
+    &.left {
+      left: 1px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &.right {
+      right: 1px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
   }
 
   .radio-container {
