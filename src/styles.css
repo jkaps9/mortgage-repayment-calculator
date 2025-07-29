@@ -318,6 +318,7 @@ section {
     .results {
       padding: 2rem;
       width: 50%;
+      max-width: 30rem;
     }
 
     .calculator {
