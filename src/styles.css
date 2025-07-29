@@ -327,6 +327,10 @@ section {
         margin-bottom: 1rem;
       }
 
+      .term-and-rate {
+        flex-direction: row;
+      }
+
       button#calculate {
         align-self: flex-start;
         font-size: 0.9rem;
