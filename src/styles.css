@@ -315,6 +315,11 @@ section {
     }
 
     .calculator {
+      .title-row {
+        display: flex;
+        justify-content: space-between;
+      }
+
       label {
         grid-column: 1;
       }
