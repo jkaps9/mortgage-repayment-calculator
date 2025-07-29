@@ -4,7 +4,6 @@ const clearButton = document.querySelector(".title-row > button");
 const inputs = document.querySelectorAll("input");
 
 clearButton.addEventListener("click", () => {
-  console.log("js");
   inputs.forEach((input) => {
     if (input.type === "radio") {
       input.checked = false;
