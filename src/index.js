@@ -7,6 +7,9 @@ const calculateButton = document.querySelector("#calculate");
 const emptyResults = document.querySelector(".empty-results");
 const completedResults = document.querySelector(".completed-results");
 
+const monthlyPayment = document.querySelector(".monthly-repayment-amount");
+const totalPayment = document.querySelector(".total-repayment-amount");
+
 clearButton.addEventListener("click", () => {
   inputs.forEach((input) => {
     if (input.type === "radio") {
@@ -25,6 +28,13 @@ calculateButton.addEventListener("click", () => {
     emptyResults.classList.add("hidden");
     completedResults.classList.remove("hidden");
   }
+
+  monthlyPayment.textContent =
+    "£" +
+    roundToTwoDecimals(getMonthlyPayment(300000, 15, 0.0525)).toLocaleString();
+  totalPayment.textContent =
+    "£" +
+    roundToTwoDecimals(getTotalPayments(300000, 15, 0.0525)).toLocaleString();
 });
 
 function getMonthlyPayment(principal, term, rate) {
@@ -40,7 +50,6 @@ function getMonthlyPayment(principal, term, rate) {
   const denominator = Math.pow(1 + monthlyRate, months) - 1;
   const monthlyPayment = principal * (numerator / denominator);
   return monthlyPayment;
-  //   return Math.round((monthlyPayment + Number.EPSILON) * 100) / 100;
 }
 
 console.log(getMonthlyPayment(300000, 25, 0.0525));
@@ -51,3 +60,8 @@ function getTotalPayments(principal, term, rate) {
 }
 
 console.log(getTotalPayments(300000, 25, 0.0525));
+
+function roundToTwoDecimals(num) {
+  console.log(num);
+  return Math.round((num + Number.EPSILON) * 100) / 100;
+}
