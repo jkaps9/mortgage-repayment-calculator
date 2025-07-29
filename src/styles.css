@@ -123,6 +123,13 @@ section {
     }
   }
 
+  .required-text {
+    color: var(--Red);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+  }
+
   .inner-label {
     position: absolute;
     place-content: center;
