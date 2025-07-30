@@ -120,20 +120,17 @@ section {
     width: 100%;
     margin-top: 1rem;
 
-    &:has(input[type="number"]:focus) > .inner-label,
-    &:has(input[type="text"]:focus) > .inner-label {
+    &:has(input:focus) > .inner-label {
       background-color: var(--Lime);
       color: var(--Slate-900);
     }
 
-    &:has(input[type="number"]:invalid) > .inner-label,
-    &:has(input[type="text"]:invalid) > .inner-label {
+    &:has(input:invalid) > .inner-label {
       background-color: var(--Red);
       color: var(--White);
     }
 
-    &:has(input[type="number"]:invalid) + .required-text,
-    &:has(input[type="text"]:invalid) + .required-text {
+    &:has(input:invalid) + .required-text {
       display: block;
     }
   }
