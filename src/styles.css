@@ -93,8 +93,7 @@ section {
   flex-direction: column;
   color: var(--Slate-700);
 
-  input[type="number"],
-  input[type="text"] {
+  input:not([type="radio"]) {
     border-radius: 5px;
     border: 1px solid var(--Slate-300);
     height: 3rem;
@@ -120,17 +119,17 @@ section {
     width: 100%;
     margin-top: 1rem;
 
-    &:has(input:focus) > .inner-label {
+    &:has(input:not([type="radio"]):focus) > .inner-label {
       background-color: var(--Lime);
       color: var(--Slate-900);
     }
 
-    &:has(input:invalid) > .inner-label {
+    &:has(input:not([type="radio"]):invalid) > .inner-label {
       background-color: var(--Red);
       color: var(--White);
     }
 
-    &:has(input:invalid) + .required-text {
+    &:has(input:not([type="radio"]):invalid) + .required-text {
       display: block;
     }
   }
